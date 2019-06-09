@@ -3,6 +3,7 @@ $h = date('H');
 $i = date('i');
 function date_rus($h, $i){
 	$h10 = $h % 10;
+	$i10 = $i % 10;
 	
 	if($h >= 5 && $h <= 20){
 		$res = 'часов';
@@ -24,7 +25,7 @@ function date_rus($h, $i){
 		$res2 = 'минут';
 	}
 	
-	return $h . ' ' . $res . ' ' . $i . ' ' . $res2;
+	return "$h $res $i $res2";
 }
 echo date_rus($h, $i);
 ?>
