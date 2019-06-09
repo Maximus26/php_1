@@ -1,6 +1,7 @@
 <?php
 $h = date('H');
-function date_rus_h($h){
+$i = date('i');
+function date_rus($h, $i){
 	$h10 = $h % 10;
 	
 	if($h >= 5 && $h <= 20){
@@ -10,27 +11,20 @@ function date_rus_h($h){
 	} elseif($h10 >= 2 && $h10 <= 4){
 		$res = 'часа';
 	} else {
-		echo 'часов';
+		$res = 'часов';
 	}
-	
-	return $h . ' ' . $res;
-}
-
-$i = date('i');
-function date_rus_i($i){
-	$i10 = $i % 10;
 	
 	if($i >= 5 && $i <= 20){
-		$res = 'минут';
+		$res2 = 'минут';
 	} elseif($i10 == 1){
-		$res = 'минута';
+		$res2 = 'минута';
 	} elseif($i10 >= 2 && $i10 <= 4){
-		$res = 'минуты';
+		$res2 = 'минуты';
 	} else {
-		echo 'минут';
+		$res2 = 'минут';
 	}
 	
-	return $i . ' ' . $res;
+	return $h . ' ' . $res . ' ' . $i . ' ' . $res2;
 }
-echo date_rus_h($h) . ' ' . date_rus_i($i);
+echo date_rus($h, $i);
 ?>
