@@ -27,4 +27,24 @@ function date_rus($h, $i){
 	return $h . ' ' . $res . ' ' . $i . ' ' . $res2;
 }
 echo date_rus($h, $i);
+
+//вариант 2 почти как в разборе дз
+$h = date('H');
+$i = date('i');
+function time_rus($n, $f1, $f2, $f3){
+	$n10 = $n % 10;
+	
+	if($n >= 5 && $n < 20){
+		echo $n . ' ' . $f1;
+	} elseif($n10 == 1){
+		echo $n . ' ' . $f2;
+	} elseif($n10 >= 2 && $n10 <= 4){
+		echo $n . ' ' . $f3;
+	} else {
+		echo $n . ' ' . $f1;
+	}
+}
+echo time_rus($h, 'часов', 'час', 'часа');
+echo ' ';
+echo time_rus($i, 'минут', 'минута', 'минуты');
 ?>
