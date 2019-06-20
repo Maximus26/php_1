@@ -41,11 +41,11 @@ function menu($arr){
 }*/
 
 //генерация галереи2
-function gallery($arr){
+function gallery($images){
 	$gal_img = '';
-	foreach ($arr as $val){
-		$gal_img .= '<a href="galleryitem.php?id=' . $val['id'] . '" class="fancy" target="_blank">
-						<img src="'. $val['url'] . '" alt="' . $val['title'] . '">
+	foreach ($images as $img){
+		$gal_img .= '<a href="galleryitem.php?id=' . $img['id'] . '" class="fancy" target="_blank">
+						<img src="'. $img['url'] . '" alt="' . $img['title'] . '">
 						<div class="hovered"></div>
 					 </a>';
 		}
