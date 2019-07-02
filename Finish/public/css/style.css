@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,700');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+/*Прижимаем футер к низу*/
+html,
+body {
+  height: 100%;
+}
+.container {
+  position: relative;
+  min-height: 100%;
+  margin: 0 auto;
+}
+.content {
+  padding-bottom: 60px;
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+/*************/
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #f8f8f8;
+	font-family: sans-serif;
+	color: dimgrey;
+}
+
+p {
+    line-height: 22px;
+    padding: 10px 0;
+}
+
+header {
+	height: 70px;
+	background-size: contain;
+	background-color: #E64A19;
+}
+
+.logo {
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.logo img {
+	width: 50px;
+}
+
+nav {
+	margin: 0;
+	padding-left: 150px;
+}
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+
+nav ul li {
+	display:inline-block;
+	background-color: #E64A19;
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;
+	color:#FFF;
+	font-size:20px;
+	line-height: 70px;
+	text-decoration:none;
+}
+
+nav a:hover{
+	background-color: #000000;
+}
+
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 70px;
+}
+
+nav ul li:hover > ul {
+	display:inherit;
+}
+
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+nav ul ul ul li {
+	position: relative;
+	top: -70px;
+	left:170px;
+}
+
+
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+.content {
+    margin: 50px 100px 0;
+}
+
+footer {
+	background-color: #E64A19;
+	clear: both;
+}
+
+footer p {
+	text-align: center;
+	line-height: 50px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0;
+}
+
+h1 {
+	color: #E64A19;
+	text-align: center;
+}
+
+h1, h2, h3 {
+	margin: 15px 0;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background: #e64a19;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background: red;
+    border: none;
+    outline: none;
+}
+
+/*галерея*/
+.catalog
+{
+	padding-bottom: 50px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.catalog .sliders
+{
+	padding-bottom: 10px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.catalog .slide
+{
+	margin: 0 auto;
+}
+.catalog .slide:after
+{
+	content: '';
+	clear: both;
+	display: table;
+	width: 100%;
+}
+.catalog .slide a
+{
+	width: 220px;
+	height: 150px;
+	margin: 8px;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+}
+.catalog .slide a img {
+    max-width: 100%;
+    min-height: 164px;
+}
+.catalog .slide a .hovered {
+	position: absolute;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity= 0 )";
+	filter: alpha(opacity = 0 );
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	display: block;
+	color: #fff;
+	z-index: 1;
+	background: #111 url('../img/zoom.png') no-repeat center 55px;
+}
+.catalog .slide a .hovered:after {
+	content: '';
+	position: absolute;
+}
+.catalog .slide a:hover .hovered {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity= 30 )";
+	filter: alpha(opacity = .3 );
+	opacity: .3;
+}
+.big-img img {
+    max-width: 100%;
+    margin-top: 20px;
+}
+.views {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #E64A19;
+}
+.views span {
+    font-weight: bold;
+}
+.news-item img {
+    width: 500px;
+    float: left;
+    margin: 0 20px 10px 0;
+}
+.img_news {
+    text-align: center;
+}
+.img_news img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.back {
+    margin: 20px 0;
+    text-align: center;
+}
+.back a {
+    text-decoration: none;
+    color: #E64A19;
+    font-size: 20px;
+    font-weight: bold;
+}
+.back a:hover {
+    border-bottom: 2px solid #E64A19;
+}
+.submit_form {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.submit_form input,
+.submit_form textarea {
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 2px solid grey;
+    width: 300px;
+    margin: 10px;
+	outline: none;
+}
+
+.submit_form label {
+	color: green;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.submit_form input[type="text"], .submit_form textarea {
+	text-transform: capitalize;
+}
+.submit_form input[type="submit"] {
+	cursor: pointer;
+}
+.reviews {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.tovary {
+    margin: 30px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.tovary .link {
+    margin: 20px 0;
+}
+
+.tov {
+	outline: 3px solid grey;
+	text-align: center;
+	margin: 10px;
+}
+
+.tov img {
+	width: 300px;
+}
+
+table, th, td {
+	border: 1px solid #999999;
+}
+
+td {
+	padding: 8px;
+}
+
+.orders {
+    width: 100%;
+}
+
+.orders .cartTable {
+    margin: 20px auto;
+}
+
+.btn {
+    background-color: #e64a19;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover {
+	background-color: red;
+}
+
+.date {
+    margin-bottom: 15px;
+}
